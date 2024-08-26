@@ -1,29 +1,47 @@
-# 2023_playwright_player
-Example of automation test repo with tests based on a real service(player). Created by domanina from scratch
----
-Pytest+python+playwright
----
-Before running (locally)
----
-`pip3 install -r requirements.txt`
+# 2023 Playwright Video Player
 
-`playwright install`
-
-`playwright install-deps`
+This repository contains an example of integration tests based on UI testing of a real web service (player). The project was built entirely from scratch by domanina using Python, Pytest, and Playwright.
 
 ---
-Run UI and Functional tests
+
+## Pytest + Python + Playwright
+
 ---
-run tests:
+
+### Prerequisites (Before Running Locally)
+
+1. Install the required Python packages:
+
+   ```bash
+   pip3 install -r requirements.txt
+2. Install playwright and deps:
+
+   ```bash
+   playwright install
+   
+   playwright install-deps
+
+---
+### Running Tests
+
+To execute the tests, use the following commands:
+
+=== Basic Test Run ===
+
+Run all tests with verbose output:
+
+`pytest -v ./tests`
+
+or simply:
+
 `pytest -v`
 
-Allure
----
+=== Running with Allure Reports ===
 
-run with Allure reports:
+To generate Allure reports:
 
 `pytest -v --alluredir=allure-results`
 
-start Allure:
+To view the generated reports:
 
 `allure serve allure-results`
